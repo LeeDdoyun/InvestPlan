@@ -1,0 +1,171 @@
+/* header & footer css 작성 하는 곳 */
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Stem";
+  src: url(../fonts/transfonter.org-20220520-083834/Stem-Regular.eot);
+  src: url(../fonts/transfonter.org-20220520-083834/Stem-Regular_1.eot);
+  src: url(../fonts/transfonter.org-20220520-083834/Stem-Regular.ttf);
+  src: url(../fonts/transfonter.org-20220520-083834/Stem-Regular.woff);
+  src: url(../fonts/transfonter.org-20220520-083834/Stem-Regular.woff2);
+  font-weight: normal;
+}
+:root {
+  --main-gray: #5c5c5c;
+  --main-blue: #5e889e;
+  --sub-purple: #755562;
+  --light-gray: #999;
+}
+
+/* header part */
+#header {
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+}
+#header header {
+  background-color: #fff;
+  width: 100%;
+  height: 70px;
+}
+#header header .wrap {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#header header .wrap .logo {
+  height: 100%;
+}
+#header header .wrap .logo img {
+  height: 70px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+#header header .wrap nav {
+  /* width: calc(100% / 3 * 1); 
+    height: 100%; */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header header .wrap nav ul {
+  display: flex;
+}
+#header header .wrap nav ul li {
+  margin: 0 15px;
+}
+#header header .wrap nav ul li a {
+  font-size: 16px;
+  display: block;
+  line-height: 50px;
+  font-weight: bold;
+  color: var(--main-gray);
+}
+#header header .wrap nav ul li a::after{
+  display:block;
+  content: '';
+  border-bottom: solid 3px var(--sub-purple) ;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+#header header .wrap nav ul li a:hover:after{
+  transform: scaleX(1);
+}
+
+#header header .wrap .account {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 180px;
+  height: 100%;
+}
+#header header .wrap .account button {
+  display: block;
+  border: none;
+  width: 180px;
+  border-radius: 5px;
+  background-color: var(--main-blue);
+  text-align: center;
+  line-height: 30px;
+}
+#header header .wrap .account button a {
+  color: #fff;
+  font-size: 16px;
+}
+
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* footer part */
+
+#footer {
+  width: 100%;
+  background-color: var(--main-gray);
+}
+#footer footer {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#footer footer .txt_part {
+  width: calc(100% / 2);
+  padding: 50px 0;
+}
+#footer footer .txt_part p {
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0;
+}
+#footer footer .icon_part {
+  width: calc(100% / 2);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#footer footer .icon_part > .icon_bx img {
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* footer section */

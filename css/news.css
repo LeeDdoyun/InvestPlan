@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+:root {
+  --main-gray: #5c5c5c;
+  --main-blue: #5e889e;
+  --sub-purple: #755562;
+  --light-gray: #999;
+}
+main {
+  height: 230px;
+  background-image: url(../img/header-bg.jpg);
+  background-size: cover;
+  background-position: 50% 10%;
+}
+main .cloude {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/cloud.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  animation: 160s moveCloude infinite linear;
+  position: relative;
+}
+
+@keyframes moveCloude {
+  /*    0%{background-position: 0% 130%;}
+          50%{background-position: 100% 130%;}
+          100%{background-position: 0% 130%;} */
+}
+
+section section .wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+section .wrap .title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+section .wrap .title p {
+  font-size: 24px;
+}
+
+section .wrap .content {
+  width: calc(100% / 12 * 10);
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+section .wrap .content .cont {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--main-blue);
+}
+section .wrap .content .cont .image {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+section .wrap .content .cont .image img {
+  width: 280px;
+  height: 125px;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+section .wrap .content .cont .sub_text {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section .wrap .content .cont .sub_text .sub_title {
+  font-size: 18px;
+  color: var(--main-blue);
+  padding-bottom: 20px;
+}
+section .wrap .content .cont .sub_text .sub_title h3 {
+}
+
+section .wrap .content .cont .sub_text .sub_txt {
+  font-size: 14px;
+  color: var(--main-gray);
+}
+section .wrap .content .cont .sub_text .sub_txt p {
+  line-height: 1.25;
+}
+
+section .wrap .content .cont .date {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--main-gray);
+}
